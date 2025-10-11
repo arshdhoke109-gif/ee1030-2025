@@ -1,0 +1,19 @@
+\frametitle{Python+ C Code}
+\begin{lstlisting}
+# Create x values
+x = np.linspace(-1, 3, 200)
+y = f(x, k)
+
+# Plot the quadratic
+plt.plot(x, y, label=f"k = {k:.2f}")
+plt.axhline(0, color="black", linewidth=0.8)  # x-axis
+plt.axvline(0, color="black", linewidth=0.8)  # y-axis
+plt.title("Quadratic: kx(x - 2) + 6 = 0 (Equal Roots Condition)")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.legend()
+plt.grid(True)
+plt.savefig("/home/arsh-dhoke/ee1030-2025/ee25btech11010/matgeo/9.4.22/figs/parabola.png")
+plt.show()
+
+\end{lstlisting}
