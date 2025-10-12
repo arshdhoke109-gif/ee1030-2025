@@ -1,0 +1,16 @@
+\frametitle{Python+ C Code}
+\begin{lstlisting}
+plt.text(2, 3.5, r'$\frac{x^2}{25} + \frac{y^2}{16} = 1$', color='b')
+
+# Styling
+plt.axhline(0, color='k', lw=0.8)
+plt.axvline(0, color='k', lw=0.8)
+plt.axis('equal')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Ellipse and Hyperbola')
+plt.grid(True)
+plt.savefig("/home/arsh-dhoke/ee1030-2025/ee25btech11010/matgeo/8.4.13/figs/ell.png")
+plt.show()
+
+\end{lstlisting}
