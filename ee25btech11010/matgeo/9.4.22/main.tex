@@ -73,33 +73,50 @@ where
 \vec{u} = \myvec{-k \\ 0}, \quad
 f = 6
 \end{align}
-
-For the roots of the quadratic to be equal, the line $y=0$ (the $x$-axis)
-must be a tangent to the conic.
-The condition for tangency of a line $\vec{n}^{T}\vec{x} = c$
-with a conic $\vec{x}^{T}\vec{V}\vec{x} + 2\vec{u}^{T}\vec{x} + f = 0$
-is :
 \begin{align}
-\vec{u}^{T}\vec{V}^{-1}\vec{u} - f = 0
+\vec{x} = \vec{h} + k_i\vec{m} \\
+\vec{m}=\myvec{1 \\ 0}
 \end{align}
 
-For the given conic:
-\begin{align}
-\vec{V}^{-1} = \myvec{\frac{1}{k} & 0 \\ 0 & 0}
-\end{align}
-
-Substituting,
-\begin{align}
-\vec{u}^{T}\vec{V}^{-1}\vec{u} - f &= 0 \\
-\implies
-\myvec{-k & 0}
-\myvec{\frac{1}{k} & 0 \\ 0 & 0}
-\myvec{-k \\ 0} - 6 = 0 
-\end{align}
+The value of $k_i$ can be found out by solving the line and conic equation
 
 \begin{align}
-\therefore k = 6
+(\vec{h} + k_i \vec{m})^{T} \vec{V} (\vec{h} + k_i \vec{m}) + 2\vec{u}^{T} (\vec{h} + k_i \vec{m}) + f &= 0 \\
+\implies k_i^{2} \vec{m}^{T}\vec{V}\vec{m} + 2k_i \vec{m}^{T} (\vec{V}\vec{h} + \vec{u}) + \vec{h}^{T}\vec{V}\vec{h} + 2\vec{u}^{T}\vec{h} + f &= 0 \\
+\text{or, } k_i^{2} \vec{m}^{T}\vec{V}\vec{m} + 2k_i \vec{m}^{T} (\vec{V}\vec{h} + \vec{u}) + g(\vec{h}) &= 0
 \end{align}
+
+Solving the above quadratic gives 
+\begin{align}
+k_i = \frac{1}{\vec{m}^{T}\vec{V}\vec{m}}
+\brak{
+    -\vec{m}^{T} (\vec{V}\vec{h} + \vec{u})
+    \;\pm\;
+    \sqrt{ \sbrak{\vec{m}^{T}(\vec{V}\vec{h} + \vec{u})}^2
+    - g(\vec{h}) \, (\vec{m}^{T}\vec{V}\vec{m}) }
+    }
+\end{align}
+
+Since the tangent passes through one point of the conic, and $g\brak{\vec{q}}=0$
+\begin{align}
+\vec{m^T}\brak{\vec{\vec{V}\vec{q} + \vec{u}}} = 0
+\end{align}
+\begin{align}
+\vec{m^T}\vec{V}\vec{q} = -\vec{m^T}\vec{u}
+\end{align}
+\begin{align}
+\vec{q} = -\frac{\brak{\vec{m^T}\vec{V}}^T\vec{m^T}\vec{u}}{\norm{\vec{m^T}\vec{V}}^2} \\
+\vec{q}=\myvec{1 \\ 0}
+\end{align}
+Since $\vec{q}$ lies on the conic, 
+\begin{align}
+g\brak{\vec{\vec{q}}} = 0
+\end{align}
+\begin{align}
+\implies \vec{q^T}\vec{V}\vec{q} + 2\vec{u^T}\vec{q} + f = 0
+\end{align}
+
+$\therefore k=6$ on solving
 
 Thus, the quadratic is
 \begin{align}
