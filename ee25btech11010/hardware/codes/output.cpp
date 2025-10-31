@@ -5,9 +5,9 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);  // RS, E, D4, D5, D6, D7
 
 const int sensorPin = A0;
 
-const float c = -409.383968
-const float b = 681.885486
-const float a = -161.730128
+const float c = -409.383968;
+const float b = 681.885486;
+const float a = -161.730128;
 
 
 void setup() {
